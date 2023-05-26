@@ -1,0 +1,17 @@
+
+# CLI tool, only in development environment.
+# https://goframe.org/pages/viewpage.action?pageId=3673173
+gfcli:
+  gen:
+    dao:
+      - link: "mysql:chat_im:*@tcp(*:3306)/chat_im" # 数据库链接
+        jsonCase: Snake # 蛇型json命名
+        descriptionTag: true # 是否生成注释
+  build:
+    name: "chat_api"
+    arch: "amd64" # all,386,amd64,arm64
+    system: "linux" # all,linux,darwin,windows....
+    packSrc: "manifest/config"
+    version: "release"
+    mod: ""
+    cgo: 0

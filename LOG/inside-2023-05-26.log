@@ -1,0 +1,23 @@
+2023-05-26 22:21:33.644 [INFO] {e0afb3866db762174ad8b2507cb3a591} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-26 22:21:33.644 [INFO] pid[37561]: http server started listening on [:10001]
+2023-05-26 22:21:33.644 [INFO] {e0afb3866db762174ad8b2507cb3a591} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |   ROUTE    |                             HANDLER                              |    MIDDLEWARE      
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /          | demo/internal/cmd.glob..func1.1.1                                |                    
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*         | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing  | GLOBAL MIDDLEWARE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*         | demo/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS  | GLOBAL MIDDLEWARE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*         | demo/internal/global/g_middleware.(*sMiddleware).ResponseHandler | GLOBAL MIDDLEWARE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /api.json  | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec            |                    
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /swagger/* | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI              | HOOK_BEFORE_SERVE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /version   | demo/internal/cmd.glob..func1.1.2                                |                    
+----------|--------|------------|------------------------------------------------------------------|--------------------
+
+2023-05-26 22:21:35.496 37561: server shutting down by signal: interrupt
+2023-05-26 22:21:35.497 [INFO] pid[37561]: all servers shutdown

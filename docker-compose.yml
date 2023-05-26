@@ -1,0 +1,6 @@
+version: '3'
+services:
+  push-go:
+    image: hamster1963/demo # 镜像名称
+    ports:
+      - "10001:10001"

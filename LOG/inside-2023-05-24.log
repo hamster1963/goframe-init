@@ -1,0 +1,530 @@
+2023-05-24 09:14:16.225 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:14:16.225 [INFO] pid[6557]: http server started listening on [:10001]
+2023-05-24 09:14:16.226 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |    MIDDLEWARE      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------
+
+2023-05-24 09:14:18.216 [DEBU] 定时任务启动中...
+2023-05-24 09:14:18.217 [DEBU] 定时任务启动成功
+2023-05-24 09:14:41.491 {b841876c54ef61175c69b67214efbd55} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.001, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 获取用户ID错误！", "", cChatMessage ReadMessage 获取用户ID错误！
+2023-05-24 09:15:02.526 [INFO] {708e974d59ef61175d69b67251b1caf1} 用户登入成功，user_id为： 1
+2023-05-24 09:15:15.902 {081f9f6f5cef61175e69b67241e1e55f} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.001, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 获取用户ID错误！", "", cChatMessage ReadMessage 获取用户ID错误！
+2023-05-24 09:15:19.159 {3056c8315def61175f69b672b6d08bd4} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.000, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 获取用户ID错误！", "", cChatMessage ReadMessage 获取用户ID错误！
+2023-05-24 09:16:33.594 {b06ad8856eef61176069b672340bf900} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.013, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 获取用户ID错误！", "", cChatMessage ReadMessage 获取用户ID错误！
+2023-05-24 09:16:44.416 {a8fa5e0b71ef61176169b67273edf119} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.002, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 获取用户ID错误！", "", cChatMessage ReadMessage 获取用户ID错误！
+2023-05-24 09:17:12.532 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:17:12.532 [INFO] pid[6774]: http server started listening on [:10001]
+2023-05-24 09:17:12.532 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:17:14.520 [DEBU] 定时任务启动中...
+2023-05-24 09:17:14.521 [DEBU] 定时任务启动成功
+2023-05-24 09:17:15.471 [INFO] JWT验证通过
+2023-05-24 09:17:15.547 {b08d7c4678ef6117e7897b01f5f76bff} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.077, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:17:57.635 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:17:57.635 [INFO] pid[6829]: http server started listening on [:10001]
+2023-05-24 09:17:57.635 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:17:59.626 [DEBU] 定时任务启动中...
+2023-05-24 09:17:59.626 [DEBU] 定时任务启动成功
+2023-05-24 09:17:59.942 [INFO] JWT验证通过
+2023-05-24 09:18:00.039 {b00c34a182ef6117d84f7319cf646dd0} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.097, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:18:00.934 [INFO] JWT验证通过
+2023-05-24 09:18:00.957 {c8de4fdc82ef6117d94f7319b48b4958} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.023, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:18:02.125 [INFO] JWT验证通过
+2023-05-24 09:18:02.147 {10d1462383ef6117da4f7319e9f3071f} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.023, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:18:28.040 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:18:28.040 [INFO] pid[6912]: http server started listening on [:10001]
+2023-05-24 09:18:28.040 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:18:30.024 [DEBU] 定时任务启动中...
+2023-05-24 09:18:30.025 [DEBU] 定时任务启动成功
+2023-05-24 09:19:03.787 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:19:03.787 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+2023-05-24 09:19:03.787 [INFO] pid[6981]: http server started listening on [:10001]
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:19:05.779 [DEBU] 定时任务启动中...
+2023-05-24 09:19:05.779 [DEBU] 定时任务启动成功
+2023-05-24 09:19:05.921 [INFO] JWT验证通过
+2023-05-24 09:19:06.006 {f84ddafd91ef611761be2b3f0eeda5ee} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.085, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:19:27.611 [INFO] pid[7039]: http server started listening on [:10001]
+2023-05-24 09:19:27.611 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:19:27.611 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:19:28.641 [INFO] JWT验证通过
+2023-05-24 09:19:28.736 {384d0a4897ef6117e3b32416c11e2083} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.096, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:19:29.604 [DEBU] 定时任务启动中...
+2023-05-24 09:19:29.604 [DEBU] 定时任务启动成功
+2023-05-24 09:19:31.541 [INFO] JWT验证通过
+2023-05-24 09:19:31.565 {5013edf497ef6117e4b324160be9120a} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.024, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:19:49.289 [INFO] pid[7113]: http server started listening on [:10001]
+2023-05-24 09:19:49.289 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:19:49.289 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:19:50.602 [INFO] JWT验证通过
+2023-05-24 09:19:50.674 {a01f08659cef61173390b25b87123a32} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.072, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:19:51.280 [DEBU] 定时任务启动中...
+2023-05-24 09:19:51.280 [DEBU] 定时任务启动成功
+2023-05-24 09:19:58.142 [INFO] pid[7163]: http server started listening on [:10001]
+2023-05-24 09:19:58.142 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:19:58.143 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:20:00.127 [DEBU] 定时任务启动中...
+2023-05-24 09:20:00.127 [DEBU] 定时任务启动成功
+2023-05-24 09:20:28.550 [INFO] pid[7253]: http server started listening on [:10001]
+2023-05-24 09:20:28.550 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:20:28.551 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:20:29.474 [INFO] JWT验证通过
+2023-05-24 09:20:29.557 {88f3f471a5ef6117e15e4b108f006aa0} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.084, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:20:30.535 [DEBU] 定时任务启动中...
+2023-05-24 09:20:30.535 [DEBU] 定时任务启动成功
+2023-05-24 09:20:32.615 [INFO] JWT验证通过
+2023-05-24 09:20:32.637 {689c372da6ef6117e25e4b1031c2924f} 500 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.021, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", "", exception recovered: runtime error: invalid memory address or nil pointer dereference
+2023-05-24 09:20:55.449 [INFO] JWT验证通过
+2023-05-24 09:20:57.398 [INFO] JWT验证通过
+2023-05-24 09:20:58.088 [INFO] JWT验证通过
+2023-05-24 09:21:01.489 [INFO] JWT验证通过
+2023-05-24 09:21:02.010 [INFO] JWT验证通过
+2023-05-24 09:21:19.599 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:21:19.599 [INFO] pid[7315]: http server started listening on [:10001]
+2023-05-24 09:21:19.599 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:21:21.590 [DEBU] 定时任务启动中...
+2023-05-24 09:21:21.591 [DEBU] 定时任务启动成功
+2023-05-24 09:21:33.751 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:21:33.751 [INFO] pid[7360]: http server started listening on [:10001]
+2023-05-24 09:21:33.751 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:21:35.221 [INFO] pid[7376]: http server started listening on [:10001]
+2023-05-24 09:21:35.221 [INFO] {30b0aefb4def61175e13ba0b9710852a} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:21:35.222 [INFO] {30b0aefb4def61175e13ba0b9710852a} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                  HANDLER                                  |             MIDDLEWARE               
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | chat-go/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing           | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | chat-go/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                     |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | chat-go/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | chat-go/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | chat-go/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                       | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | chat-go/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | chat-go/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | chat-go/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|---------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:21:35.688 [INFO] JWT验证通过
+2023-05-24 09:21:37.217 [DEBU] 定时任务启动中...
+2023-05-24 09:21:37.217 [DEBU] 定时任务启动成功
+2023-05-24 09:21:38.334 [INFO] JWT验证通过
+2023-05-24 09:21:38.357 {582c567ab5ef6117aff90a0403c04bd7} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.024, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 无此消息！", "", cChatMessage ReadMessage 无此消息！
+2023-05-24 09:21:52.111 [INFO] JWT验证通过
+2023-05-24 09:21:54.413 [INFO] JWT验证通过
+2023-05-24 09:21:54.435 {9840c238b9ef6117b1f90a04897ea041} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.022, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 消息已读", "", cChatMessage ReadMessage 消息已读
+2023-05-24 09:21:55.404 [INFO] JWT验证通过
+2023-05-24 09:21:55.426 {48fad673b9ef6117b2f90a043e7729d6} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.022, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 消息已读", "", cChatMessage ReadMessage 消息已读
+2023-05-24 09:22:07.301 [INFO] JWT验证通过
+2023-05-24 09:22:07.380 {d071ec38bcef6117b3f90a040491949e} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.079, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 消息已读", "", cChatMessage ReadMessage 消息已读
+2023-05-24 09:22:08.296 [INFO] JWT验证通过
+2023-05-24 09:22:08.319 {f0214574bcef6117b4f90a04141d1111} 200 "POST http 127.0.0.1:10001 /message/ReadMessage HTTP/1.1" 0.023, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 400, "cChatMessage ReadMessage 消息已读", "", cChatMessage ReadMessage 消息已读
+2023-05-24 09:22:10.377 [INFO] JWT验证通过
+2023-05-24 09:22:13.881 [INFO] JWT验证通过
+2023-05-24 09:28:48.305 [INFO] {405e362119f06117793dee329e1370c7} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:28:48.306 [INFO] {405e362119f06117793dee329e1370c7} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+2023-05-24 09:28:48.305 [INFO] pid[7779]: http server started listening on [:10001]
+
+  ADDRESS | METHOD |          ROUTE          |                                HANDLER                                 |             MIDDLEWARE               
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | demo/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | demo/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | demo/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                  |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | demo/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | demo/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | demo/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                    | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | demo/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | demo/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | demo/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:28:49.293 7779: server shutting down by signal: interrupt
+2023-05-24 09:28:49.293 [INFO] pid[7779]: all servers shutdown
+2023-05-24 09:51:30.099 [INFO] pid[9275]: http server started listening on [:10001]
+2023-05-24 09:51:30.099 [INFO] {6899063756f161173171554c83905889} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:51:30.099 [INFO] {6899063756f161173171554c83905889} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |          ROUTE          |                                HANDLER                                 |             MIDDLEWARE               
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /                       | demo/internal/cmd.glob..func1.1.1                                      |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | demo/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS        | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /*                      | demo/internal/global/g_middleware.(*sMiddleware).ResponseHandler       | GLOBAL MIDDLEWARE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                  |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/AddMessage     | demo/internal/controller/c_chat_message.(*cChatMessage).AddMessage     | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /message/GetMessageById | demo/internal/controller/c_chat_message.(*cChatMessage).GetMessageById | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /message/ReadMessage    | demo/internal/controller/c_chat_message.(*cChatMessage).ReadMessage    | g_middleware.(*sMiddleware).JWTAuth  
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                    | HOOK_BEFORE_SERVE                    
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | POST   | /user/Login             | demo/internal/controller/c_chat_login.(*cChatLogin).Login              |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | GET    | /user/TokenAuthTest     | demo/internal/controller/c_chat_login.(*cChatLogin).TokenAuthTest      |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+  :10001  | ALL    | /version                | demo/internal/cmd.glob..func1.1.2                                      |                                      
+----------|--------|-------------------------|------------------------------------------------------------------------|--------------------------------------
+
+2023-05-24 09:51:31.249 9275: server shutting down by signal: interrupt
+2023-05-24 09:51:31.249 [INFO] pid[9275]: all servers shutdown
+2023-05-24 09:52:01.094 [INFO] pid[9360]: http server started listening on [:10001]
+2023-05-24 09:52:01.094 [INFO] {c0b4b46d5df161179933766e9df09fe3} swagger ui is serving at address: http://127.0.0.1:10001/swagger/
+2023-05-24 09:52:01.095 [INFO] {c0b4b46d5df161179933766e9df09fe3} openapi specification is serving at address: http://127.0.0.1:10001/api.json
+
+  ADDRESS | METHOD |   ROUTE    |                             HANDLER                              |    MIDDLEWARE      
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /          | demo/internal/cmd.glob..func1.1.1                                |                    
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*         | github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing  | GLOBAL MIDDLEWARE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*         | demo/internal/global/g_middleware.(*sMiddleware).MiddlewareCORS  | GLOBAL MIDDLEWARE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /*         | demo/internal/global/g_middleware.(*sMiddleware).ResponseHandler | GLOBAL MIDDLEWARE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /api.json  | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec            |                    
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /swagger/* | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI              | HOOK_BEFORE_SERVE  
+----------|--------|------------|------------------------------------------------------------------|--------------------
+  :10001  | ALL    | /version   | demo/internal/cmd.glob..func1.1.2                                |                    
+----------|--------|------------|------------------------------------------------------------------|--------------------
+
+2023-05-24 09:52:03.080 [DEBU] 定时任务启动中...
+2023-05-24 09:52:03.082 [DEBU] 定时任务启动成功
+2023-05-24 09:52:07.753 9360: server shutting down by signal: interrupt
+2023-05-24 09:52:07.754 [INFO] pid[9360]: all servers shutdown
